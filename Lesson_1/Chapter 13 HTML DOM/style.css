@@ -4,7 +4,9 @@ html{
     box-sizing: border-box;
     
 }
-.containner{
-    
-
+.red {
+    color: red;
+}
+.green {
+    color: green;
 }
