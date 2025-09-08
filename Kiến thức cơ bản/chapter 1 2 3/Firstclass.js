@@ -239,7 +239,7 @@ comment nhieu dong
 // var b = 2;
 // var result = a < b;
 // var result = a < b &&  a < 0
-// console.log('result', result);
+// console.log('result', result);   
 // if (a < b) {
 //     console.log(true);
 // }else{
