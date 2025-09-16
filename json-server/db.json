@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "fb4b",
+      "name": "Add your name in the body"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

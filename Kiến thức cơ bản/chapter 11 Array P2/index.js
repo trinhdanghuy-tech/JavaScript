@@ -44,57 +44,57 @@ courses.forEach(function(course,index) {
     console.log(index,course)
 });
 //2.every()-----Kiem tra ca phan tu ma thoa man 1 dieu kien nao do 1 phan sai tra bang false
-// var isFree = courses.every(function(course,index){
-//     console.log(index);
-//     return course.coin === 0;
-// });console.log(isFree)
+var isFree = courses.every(function(course,index){
+    console.log(index);
+    return course.coin === 0;
+});console.log(isFree)
 //3.some()---Kiem tra cac phan tu cua mang tra lai true neu 1 trong cac phan tu mang du dieu kien
-// var isFree = courses.some(function(course,index){
-//     console.log(index);
-//     return course.coin === 0;
-// });
-// console.log(isFree)
+var isFree = courses.some(function(course,index){
+    console.log(index);
+    return course.coin === 0;
+});
+console.log(isFree)
 //4.find()---Tim kiem phan tu muon tim se tra ve phan tu dau tien thoa man
-// var isFree = courses.find(function(course,index){
-//     return course.name === 'Java Script'
-// })
-// console.log(isFree)
+var isFree = courses.find(function(course,index){
+    return course.name === 'Java Script'
+})
+console.log(isFree)
 //5.filter-----Tim cac phan tu thoa man dieu kien
-// var isFree = courses.filter(function(course,index){
-//     return course.name === 'Java Script'
-// })
-// console.log(isFree)
+var isFree = courses.filter(function(course,index){
+    return course.name === 'Java Script'
+})
+console.log(isFree)
 //6.map()----Hien thi lai cai gi thi nhan cai do
-// function coursesHandle(course, index, originArray){
-//     // console.log(course)
-//     return {
-//         id: course.id,
-//         name: `Khoa hoc: ${course.name}`,
-//         coin: course.coin,
-//         index: index,
-//         originArray: originArray
-//     }
-// }
-// var newCourses = courses.map(coursesHandle); 
-// console.log(newCourses)
+function coursesHandle(course, index, originArray){
+    // console.log(course)
+    return {
+        id: course.id,
+        name: `Khoa hoc: ${course.name}`,
+        coin: course.coin,
+        index: index,
+        originArray: originArray
+    }
+}
+var newCourses = courses.map(coursesHandle); 
+console.log(newCourses)
 //7.reduce()----
-// var i = 0   
-// function coinHandle(accumulator, currentValue, currentIndex,originArray) {
-//     i++
-//     var total = accumulator + currentValue.coin;
-//     console.table({
-//         'Luot chay: ': i,
-//         'Bien luu tru': accumulator,
-//         'Gia khoa hoc': currentValue.coin,
-//         'Tich tru duoc: ':total
-//     });
-//     console.log(currentValue)
-//     console.log(currentIndex)
-//     console.log(originArray)
-//     return total 
-// }
-// var totalCoin = courses.reduce(coinHandle, 0);//y nghia cua 0:Khoi tao bien luu tru
-// console.log(totalCoin)
+var i = 0   
+function coinHandle(accumulator, currentValue, currentIndex,originArray) {
+    i++
+    var total = accumulator + currentValue.coin;
+    console.table({
+        'Luot chay: ': i,
+        'Bien luu tru': accumulator,
+        'Gia khoa hoc': currentValue.coin,
+        'Tich tru duoc: ':total
+    });
+    console.log(currentValue)
+    console.log(currentIndex)
+    console.log(originArray)
+    return total 
+}
+var totalCoin = courses.reduce(coinHandle, 0);//y nghia cua 0:Khoi tao bien luu tru
+console.log(totalCoin)
 //Bai 1 
 // var depthArray = [1,2,[3,4],5,6,[7,8,9]]
 // var flatArray = depthArray.reduce(function(flatOut, depthItem) {
